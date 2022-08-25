@@ -1,0 +1,16 @@
+@use "colors" as c;
+@mixin bikes {
+  .bikes {
+    background-color: c.$accent-yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

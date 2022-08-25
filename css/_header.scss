@@ -1,0 +1,12 @@
+@use "colors" as c;
+@mixin headerMain {
+  header {
+    padding: 3vw;
+    background-color: c.$accent-yellow;
+    img {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 45vw;
+    }
+  }
+}

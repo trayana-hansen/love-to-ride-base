@@ -1,85 +1,41 @@
-@use "/css/colors" as c;
+@use "colors" as c;
+@use "fonts";
+@use "signup";
+@use "bikes";
+@use "header";
+@use "paragraphs";
+@include fonts.mainFonts;
+@include signup.signUp;
+@include bikes.bikes;
+@include header.headerMain;
+@include paragraphs.paragraph;
 html {
   font-size: 18px;
 }
-header {
-  padding: 3vw;
-  background-color: c.$accent-yellow;
-  img {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 45vw;
-  }
+.headerMain {
+  @include headerMain;
 }
+.bikes {
+  @include bikes;
+}
+.signup {
+  @include signUp;
+}
+p {
+  @include paragraph;
+}
+
 h2 {
   font-family: "Miso Bold", "Montserrat Bold", sans-serif;
   font-size: 2rem;
   line-height: 22.6px;
   letter-spacing: -0.025em;
-  color: $red;
+  color: c.$red;
   text-align: center;
   margin: 0;
 }
 
-form {
-  padding: 3vw;
-  text-align: center;
-  border-bottom: 2px solid c.$dark-blue;
-  background-color: c.$accent-yellow;
-
-  input[type="submit"] {
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1;
-    border-radius: 500px;
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: c.$light-grey;
-    background-color: c.$red;
-    height: 48px;
-    margin: 12px;
-  }
-}
 .local,
 .about {
   background-color: c.$light-grey;
-}
-
-p {
-  font-family: "Whitney", "Public Sans", sans-serif;
-  font-size: 1.5rem;
-  line-height: 23px;
-  letter-spacing: -0.025em;
-  color: c.$black;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.bikes {
-  background-color: c.$accent-yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
-
-input {
-  font-family: "Whitney", "Public Sans", sans-serif;
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 13px;
-}
-label {
-  font-size: 1.5rem;
-  color: c.$dark-blue;
 }
